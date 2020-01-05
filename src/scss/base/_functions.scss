@@ -1,0 +1,16 @@
+// Set Text Color
+@function set-text-color($color) {
+  @if(lightness($color) > 50) {
+    @return $dark;
+  }
+
+  @else {
+    @return $light;
+  }
+}
+
+// Calculate REM
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return #{$remSize}rem;
+}

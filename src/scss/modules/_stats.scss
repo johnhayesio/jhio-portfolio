@@ -1,0 +1,78 @@
+// Section: Stats
+#stats {
+  background: $warning;
+
+  .stats {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+    padding: 1.50rem 0;
+
+    li {
+      line-height: 1.5;
+
+      .far {
+        position: absolute;
+        top: -1.25rem;
+        left: 50%;
+        width: 40%;
+        height: 3.125rem;
+        color: $dark-blue;
+        font-size: 2.812rem;
+        margin-left: -20%;
+      }
+
+      &.stats-title {
+        color: $dark-blue;
+        font-size: 1rem;
+      }
+
+      &.stats-number {
+        color: $dark-blue;
+        font-size: 3.50rem;
+        font-weight: 700;
+      }
+
+      & span.stats-year {
+        position: absolute;
+        top: -0.10rem;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        font-size: 0.70rem;
+        z-index: 3;
+      }
+    }
+
+    div {
+      position: relative;
+      margin: 0 0.50rem;
+      padding: 2rem 0;
+      border: 0.125rem solid $dark-blue;
+      border-top: none;
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        width: 30%;
+        border-bottom: 0.125rem solid $dark-blue;
+      }
+
+      &::before {
+        right: 0;
+      }
+
+      &::after {
+        left: 0;
+      }
+    }
+  }
+
+  @include atSmall {
+    .stats {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}

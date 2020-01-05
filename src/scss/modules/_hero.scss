@@ -1,0 +1,97 @@
+#hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  color: $light;
+
+  &::before {
+    content: '';
+    background: $bg-img no-repeat center center / cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -2;
+    filter: contrast(175%) grayscale(30%);
+  }
+
+  .hero-content {
+    opacity: 0;
+    animation: fadeIn ease-in 1;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+    animation-delay: 1s;
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+  }
+
+  h1 {
+    font-size: 2.50rem;
+    line-height: 1.2;
+    letter-spacing: 0.125rem;
+  }
+
+  .lead {
+    font-size: 0.875rem;
+  }
+
+  .btn-light {
+    padding: 0.60rem 1rem;
+  }
+}
+
+.scroll-down {
+  position: absolute;
+  left: 47%;
+  bottom: 0;
+  text-align: center;
+  font-size: 2.25rem;
+  animation: bounce 1s infinite;
+
+  @keyframes bounce {
+    0% {
+      bottom: 0;
+    }
+
+    50% {
+      bottom: 0.20rem;
+    }
+
+    100% {
+      bottom: 0;
+    }
+  }
+}
+
+@include atSmall {
+  #hero {
+    .scroll-down {
+      left: 49%;
+    }
+
+    .hero-content {
+      h1 {
+        font-size: 4rem;
+      }
+
+      .lead {
+        font-size: 1.30rem;
+      }
+
+      .btn-light {
+        padding: 0.80rem 2rem;
+      }
+    }
+  }
+}

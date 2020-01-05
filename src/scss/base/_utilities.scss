@@ -1,0 +1,165 @@
+.container {
+  max-width: $site-width;
+  margin: auto;
+  padding: 0 1.5rem;
+  overflow: hidden;
+}
+
+// Buttons
+%btn-shared {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 0.3125rem;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.btn {
+  @extend %btn-shared;
+  background: $warning;
+  color: set-text-color($warning);
+
+  &-light {
+    @extend %btn-shared;
+    background: $light;
+    color: set-text-color($light);
+  }
+
+  &-dark {
+    @extend %btn-shared;
+    background: $dark-blue;
+    color: set-text-color($dark-blue);
+  }
+}
+
+.learn-more {
+  @extend %btn-shared;
+  background: $light;
+  color: set-text-color($light);
+  border: 1px solid $dark-blue;
+
+  &:hover {
+    background: $dark-blue;
+    color: set-text-color($dark-blue);
+  }
+}
+
+button[class^="btn-"]:hover,
+a[class^="btn-"]:hover,
+input[class^="btn-"]:hover {
+  background: $warning;
+}
+
+// Backgrounds
+.bg {
+  &-main {
+    background: $warning;
+    color: set-text-color($warning);
+  }
+
+  &-light {
+    background: $light;
+    color: set-text-color($light);
+  }
+
+  &-medium {
+    background: $medium;
+    color: set-text-color($medium);
+  }
+
+  &-dark {
+    background: $dark-blue;
+    color: set-text-color($dark-blue);
+  }
+}
+
+// Progress Bars
+.progress-bars {
+  background: $medium;
+  margin-bottom: 0.6rem;
+  height: calculateRem(20px);
+  border-radius: calculateRem(5px);
+  overflow: hidden;
+
+  div {
+    background: $warning;
+    color: $light;
+    height: 100%;
+    text-align: center;
+  }
+}
+
+.lead {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+// Margin
+.my {
+  &-1 {
+    margin: 1rem 0;
+  }
+
+  &-2 {
+    margin: 2rem 0;
+  }
+
+  &-3 {
+    margin: 3rem 0;
+  }
+
+  &-4 {
+    margin: 4rem 0;
+  }
+}
+
+// Padding
+.py {
+  &-1 {
+    padding: 1rem 0;
+  }
+
+  &-2 {
+    padding: 2rem 0;
+  }
+
+  &-3 {
+    padding: 3rem 0;
+  }
+
+  &-4 {
+    padding: 4rem 0;
+  }
+}
+
+.section-title {
+  display: block;
+  font-size: 1.55rem;
+  padding-bottom: 0.5rem;
+  text-align: center;
+  font-weight: 100;
+  text-transform: uppercase;
+}
+
+.break-line {
+  display: block;
+  background: $warning;
+  height: 0.125rem;
+  width: 5rem;
+  margin: 0 auto 1rem auto;
+}
+
+@include atSmall {
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .lead {
+    font-size: 1.3rem;
+  }
+}

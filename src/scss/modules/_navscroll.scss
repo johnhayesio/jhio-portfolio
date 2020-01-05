@@ -1,0 +1,36 @@
+// Navbar Scroll CSS
+.main-navbar {
+  background: transparent;
+  opacity: 0;
+  animation: fadeIn ease-in 1;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+  animation-delay: 1.5s;
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+.alt-navbar {
+  background: $dark-blue;
+}
+
+.navbar-colored {
+  background: $dark-blue;
+  border-bottom: calculateRem(3px) solid $warning;
+  padding: 1rem !important;
+  transition: all 1s ease-in-out;
+}
+
+@include atSmall {
+  .navbar-colored {
+    padding: 0rem !important;
+  }
+}

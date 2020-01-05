@@ -1,0 +1,96 @@
+#about {
+  padding-top: calculateRem(88px);
+
+  .about-info {
+    display: grid;
+    grid-template-areas:
+      'bioimg'
+      'bio'
+      'pr1'
+      'pr2'
+      'pr3'
+      'pr4';
+    grid-gap: 1.2rem;
+  }
+
+  // Grid Areas
+  .bio-img {
+    grid-area: bioimg;
+    border-radius: calculateRem(5px);
+  }
+
+  .bio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-area: bio;
+    border-left: calculateRem(3px) solid $warning;
+    padding: 0 0.80rem 1.50rem 0.80rem;
+
+    .tagline {
+      font-size: 1rem;
+    }
+  }
+
+  .award-1 {
+    grid-area: pr1;
+  }
+
+  .award-2 {
+    grid-area: pr2;
+  }
+
+  .award-3 {
+    grid-area: pr3;
+  }
+
+  .award-4 {
+    grid-area: pr4;
+  }
+
+  .priority-1 .far,
+  .priority-2 .far,
+  .priority-3 .far,
+  .priority-4 .far {
+    color: $warning;
+    margin: 1rem;
+  }
+}
+
+@include atSmall {
+  #about {
+    padding-top: calculateRem(122px);
+
+    .about-info {
+      grid-template-areas:
+        'bioimg bio bio bio'
+        'pr1 pr2 pr3 pr4';
+    }
+
+    .bio {
+      .tagline {
+        font-size: 1.25rem;
+      }
+
+      p {
+        font-size: 0.825rem;
+      }
+    }
+  }
+}
+
+@include atLarge {
+  #about {
+    .bio {
+      .tagline {
+        font-size: 1.75rem;
+      }
+
+      p {
+        font-size: 1.20rem;
+      }
+    }
+  }
+
+}

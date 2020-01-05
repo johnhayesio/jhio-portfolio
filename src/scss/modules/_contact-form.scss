@@ -1,0 +1,58 @@
+#contact-form {
+  padding-top: calculateRem(88px);
+
+  .text-fields {
+    display: grid;
+    grid-template-areas:
+      'name'
+      'email'
+      'subject'
+      'phone'
+      'message';
+    grid-gap: 1.20rem;
+    margin-bottom: 1.20rem;
+
+    // Grid Areas
+    .name-input {
+      grid-area: name;
+    }
+
+    .subject-input {
+      grid-area: subject;
+    }
+
+    .email-input {
+      grid-area: email;
+    }
+
+    .phone-input {
+      grid-area: phone;
+    }
+
+    .message-input {
+      grid-area: message;
+      height: calculateRem(100px);
+    }
+
+    .text-input {
+      padding: 0.50rem 1rem;
+    }
+  }
+
+  button[type='submit'] {
+    width: 50%;
+  }
+}
+
+@include atSmall {
+  #contact-form {
+    padding-top: calculateRem(122px);
+
+    .text-fields {
+      grid-template-areas:
+        'name email'
+        'subject phone'
+        'message message';
+    }
+  }
+}

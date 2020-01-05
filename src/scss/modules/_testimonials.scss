@@ -1,0 +1,35 @@
+.testimonials {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 0.50rem;
+
+  ul {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    list-style: none;
+  }
+
+  li {
+    padding-left: 0.50rem;
+  }
+
+  p {
+    border: calculateRem(1px) solid $medium;
+    border-radius: calculateRem(5px);
+    padding: 0.50rem;
+  }
+
+  img {
+    margin-right: 0.50rem;
+    max-height: calculateRem(70px);
+    max-width: calculateRem(70px);
+    border-radius: 50%;
+  }
+}
+
+@include atSmall {
+  .testimonials {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

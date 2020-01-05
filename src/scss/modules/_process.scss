@@ -1,0 +1,69 @@
+#process {
+  .process {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1.25rem;
+    text-align: center;
+
+    &-group {
+      border-bottom: 1px solid $medium;
+      padding-bottom: 2.85rem;
+
+      &:last-child {
+        border: none;
+        padding-bottom: 0.5rem;
+      }
+    }
+
+    &-icon {
+      position: relative;
+      text-align: center;
+      color: $warning;
+    }
+
+    &-step {
+      display: none;
+    }
+  }
+
+  @include atSmall {
+    .process {
+      grid-template-columns: repeat(4, 1fr);
+
+      &-group {
+        border: none;
+        padding: 0.50rem;
+      }
+
+      &-icon {
+        background: $dark-blue;
+        color: set-text-color($dark-blue);
+        border-radius: 50%;
+        padding: 2rem 1.75rem;
+
+        &:hover {
+          background: $warning;
+          color: $dark-blue;
+
+          .process-step {
+            background: $dark-blue;
+            color: set-text-color($dark-blue);
+          }
+        }
+      }
+
+      &-step {
+        display: block;
+        position: absolute;
+        background: $warning;
+        color: $dark-blue;
+        font-size: 1.25rem;
+        top: 0;
+        right: calculateRem(10px);
+        border-radius: 50%;
+        padding: 0.20rem 0.50rem 0.20rem 0.50rem;
+        transition: all 1s;
+      }
+    }
+  }
+}

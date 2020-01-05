@@ -1,0 +1,113 @@
+#work-gallery {
+  padding-top: calculateRem(88px);
+
+  .items {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+    box-shadow: 0 calculateRem(5px) calculateRem(10px) 0 #rgba(0, 0, 0, 0.3);
+  }
+
+  .item {
+    position: relative;
+    background: $warning;
+    overflow: hidden;
+
+    &::after {
+      content: '';
+      position: absolute;
+      display: block;
+      background: inherit;
+      opacity: 0.9;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      transform: scale(2) translateX(-75%) translateY(-75%) rotate(-28deg);
+      transition: transform 3s cubic-bezier(0.2, 1, 0.3, 1);
+    }
+
+    // Main Cover Overlay
+    &:hover::after {
+      transform: scale(2) translateX(0) translateY(0) rotate(-28deg);
+    }
+
+    // Scale Img Hover
+    &:hover .item-img {
+      transform: scale(1.2);
+    }
+
+    // Text Hover
+    &:hover .item-text {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    &-img {
+      display: block;
+      height: auto;
+      transform: translateZ(0);
+      transition: transform 750ms cubic-bezier(0.2, 1, 0.3, 1);
+    }
+
+    &-img::before {
+      content: '';
+      display: block;
+      padding-top: 75%;
+      overflow: hidden;
+    }
+
+    &-img img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: auto;
+      width: 100%;
+      line-height: 0;
+    }
+
+    &-text {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      opacity: 0;
+      text-align: center;
+      z-index: 1;
+      color: $dark-blue;
+      transform: translateY(-20%);
+      transition: opacity 500ms cubic-bezier(0.2, 1, 0.3, 1), transform 4s cubic-bezier(0.2, 1, 0.3, 1);
+    }
+
+    &-text-wrap {
+      position: absolute;
+      width: 100%;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &-text-title {
+      font-size: 2rem;
+      margin: calculateRem(5px);
+      padding: 0 1rem;
+    }
+
+    &-text-category {
+      text-transform: uppercase;
+      font-size: 1.20rem;
+      opacity: 0.7;
+      margin: 0;
+    }
+  }
+}
+
+@include atSmall {
+  #work-gallery {
+    padding-top: calculateRem(122px);
+
+    .items {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
