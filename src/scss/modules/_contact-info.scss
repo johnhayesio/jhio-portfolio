@@ -1,8 +1,9 @@
 #contact-info {
   .contact-info {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 3rem;
+    display: flex;
+    justify-content: center;
+    // grid-template-columns: 1fr;
+    // grid-gap: 3rem;
     text-align: center;
   }
 
@@ -30,7 +31,7 @@
 
   #tagline {
     h1 {
-      font-size: 2.50rem;
+      font-size: 2.5rem;
     }
   }
 }

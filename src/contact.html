@@ -1,92 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="scss/index.scss" />
+    <title>Contact | Fullstack Web Developer</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="scss/index.scss">
-  <title>Contact | Fullstack Web Developer</title>
-</head>
+  <body>
+    <nav id="navbar" class="alt-navbar">
+      <h1 class="navbar-logo">JH</h1>
+      <ul class="navbar-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="contact.html" class="current">Contact</a></li>
+      </ul>
+    </nav>
 
-<body>
-  <nav id="navbar" class="alt-navbar">
-    <h1 class="navbar-logo">JH</h1>
-    <ul class="navbar-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="work.html">Work</a></li>
-      <li><a href="contact.html" class="current">Contact</a></li>
-    </ul>
-  </nav>
+    <!-- Section: Contact Form -->
+    <section id="contact-form" class="text-center py-3">
+      <div class="container">
+        <h2 class="section-title">Contact Me</h2>
+        <div class="break-line"></div>
+        <p class="lead">Here is how you can reach me.</p>
+        <form method="POST" action="https://formspree.io/mzbzdllp">
+          <div class="text-fields">
+            <input
+              type="text"
+              class="text-input name-input"
+              name="text"
+              placeholder="Name"
+            />
+            <input
+              type="text"
+              class="text-input subject-input"
+              name="subject"
+              placeholder="Subject"
+            />
+            <input
+              type="email"
+              class="text-input email-input"
+              name="email"
+              placeholder="Email Address"
+            />
+            <input
+              type="text"
+              class="text-input phone-input"
+              name="phone"
+              placeholder="Phone Number"
+            />
+            <textarea
+              class="text-input message-input"
+              name="message"
+              placeholder="Enter Message"
+            ></textarea>
+          </div>
+          <button type="submit" class="btn-dark">Submit</button>
+        </form>
+      </div>
+    </section>
 
-  <!-- Section: Contact Form -->
-  <section id="contact-form" class="text-center py-3">
-    <div class="container">
-      <h2 class="section-title">Contact Me</h2>
-      <div class="break-line"></div>
-      <p class="lead">Here is how you can reach me.</p>
-      <form method="POST" action="https://formspree.io/mzbzdllp">
-        <div class="text-fields">
-          <input type="text" class="text-input name-input" name="text" placeholder="Name">
-          <input type="text" class="text-input subject-input" name="subject" placeholder="Subject">
-          <input type="email" class="text-input email-input" name="email" placeholder="Email Address">
-          <input type="text" class="text-input phone-input" name="phone" placeholder="Phone Number">
-          <textarea class="text-input message-input" name="message" placeholder="Enter Message"></textarea>
-        </div>
-        <button type="submit" class="btn-dark">Submit</button>
-      </form>
-    </div>
-  </section>
-
-  <!-- Section: Contact Info -->
-  <section id="contact-info" class="py-3 bg-dark">
-    <div class="container">
-      <div class="contact-info">
-        <div>
-          <i class="fas fa-envelope fa-2x"></i>
-          <h3>Email</h3>
-          <p>john@johnhayes.io</p>
-        </div>
-        <div>
-          <i class="fas fa-phone fa-2x"></i>
-          <h3>Phone</h3>
-          <p>251-260-8002</p>
-        </div>
-        <div>
-          <i class="fas fa-address-card fa-2x"></i>
-          <h3>Location</h3>
-          <p>Moscow</p>
+    <!-- Section: Contact Info -->
+    <section id="contact-info" class="py-3 bg-dark">
+      <div class="container">
+        <div class="contact-info">
+          <!-- <div>
+            <i class="fas fa-phone fa-2x"></i>
+            <h3>Phone</h3>
+            <p>251-260-8002</p>
+          </div> -->
+          <div>
+            <i class="fas fa-envelope fa-2x"></i>
+            <!-- <h3>Email</h3> -->
+            <p>john@johnhayes.io</p>
+          </div>
+          <!-- <div>
+            <i class="fas fa-address-card fa-2x"></i>
+            <h3>Location</h3>
+            <p>Moscow</p>
+          </div> -->
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Section: Tagline -->
-  <section id="tagline" class="bg-main py-3">
-    <div class="container">
-      <h1>Let's Start Your Next Project</h1>
-    </div>
-  </section>
+    <!-- Section: Tagline -->
+    <section id="tagline" class="bg-main py-3">
+      <div class="container">
+        <h1>Let's Start Your Next Project</h1>
+      </div>
+    </section>
 
-  <!-- Footer -->
-  <footer id="main-footer">
-    <div class="container">
-      <div class="footer-content">
-        <p>Copyright &copy; 2019. All Rights Reserved</p>
-        <div class="social">
-          <a href="http://bit.ly/jhiogh" target="_blank">
-            <i class="fab fa-github"></i>
-          </a>
-          <a href="http://bit.ly/jhioli" target="_blank">
-            <i class="fab fa-linkedin"></i>
-          </a>
+    <!-- Footer -->
+    <footer id="main-footer">
+      <div class="container">
+        <div class="footer-content">
+          <p>Copyright &copy; 2020. All Rights Reserved</p>
+          <div class="social">
+            <a href="http://bit.ly/jhiogh" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="http://bit.ly/jhioli" target="_blank">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </div>
         </div>
       </div>
-    </div>
-  </footer>
+    </footer>
 
-  <script src="js/contact.js"></script>
-</body>
-
+    <script src="js/contact.js"></script>
+  </body>
 </html>
